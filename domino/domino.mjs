@@ -4902,14 +4902,14 @@ function dew$o() {
     _dewExec$o = true;
     exports$o = CustomEvent;
 
-    var Event = dew$N();
+    var Event2 = dew$N();
 
     function CustomEvent(type, dictionary) {
         // Just use the superclass constructor to initialize
-        Event.call(this, type, dictionary);
+        Event2.call(this, type, dictionary);
     }
 
-    CustomEvent.prototype = Object.create(Event.prototype, {
+    CustomEvent.prototype = Object.create(Event2.prototype, {
         constructor: {
             value: CustomEvent
         }
@@ -4923,7 +4923,7 @@ function dew$p() {
     if (_dewExec$p) return exports$p;
     _dewExec$p = true;
     exports$p = {
-        Event: dew$N(),
+        Event2: dew$N(),
         UIEvent: dew$O(),
         MouseEvent: dew$P(),
         CustomEvent: dew$o()
@@ -24897,7 +24897,7 @@ function dew$F() {
 
     var Comment = dew$g();
 
-    var Event = dew$N();
+    var Event2 = dew$N();
 
     var DocumentFragment = dew$h();
 
@@ -25074,7 +25074,7 @@ function dew$F() {
                 var target = this._nodes[targetNid];
                 if (!target) return;
 
-                target._dispatchEvent(new Event(type, details), true);
+                target._dispatchEvent(new Event2(type, details), true);
             }
         },
         nodeName: {
@@ -25557,16 +25557,16 @@ function dew$F() {
             value: function () {
                 this.readyState = "interactive";
 
-                this._dispatchEvent(new Event("readystatechange"), true);
+                this._dispatchEvent(new Event2("readystatechange"), true);
 
-                this._dispatchEvent(new Event("DOMContentLoaded"), true);
+                this._dispatchEvent(new Event2("DOMContentLoaded"), true);
 
                 this.readyState = "complete";
 
-                this._dispatchEvent(new Event("readystatechange"), true);
+                this._dispatchEvent(new Event2("readystatechange"), true);
 
                 if (this.defaultView) {
-                    this.defaultView._dispatchEvent(new Event("load"), true);
+                    this.defaultView._dispatchEvent(new Event2("load"), true);
                 }
             }
         },

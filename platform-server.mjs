@@ -475,11 +475,11 @@ var exports = {};
         // Make all Domino types available as types in the global env.
         Object.assign(_global, domino.impl);
         _global["KeyboardEvent"] = domino.impl.Event;
-        _global["Event"] = domino.impl.Event;
-        _global["EventTargetImpl"] = domino.impl.Event;
-        globalThis["KeyboardEvent"] = domino.impl.Event;
-        globalThis["Event"] = domino.impl.Event;
-        globalThis["EventTargetImpl"] = domino.impl.Event;
+        _global["Event2"] = domino.impl.Event;
+        // _global["EventTargetImpl"] = domino.impl.Event;
+        // globalThis["KeyboardEvent"] = domino.impl.Event;
+        // globalThis["Event"] = domino.impl.Event;
+        // globalThis["EventTargetImpl"] = domino.impl.Event;
 
     }
     /**
