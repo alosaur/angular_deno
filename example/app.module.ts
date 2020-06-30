@@ -1,14 +1,8 @@
 
-import { Component, NgModule, Version } from 'https://jspm.dev/@angular/core';
+import { NgModule } from 'https://jspm.dev/@angular/core';
 import { ServerModule } from '../mod.ts';
+import { AppComponent } from './app.component.ts';
 
-@Component({
-    selector: 'my-app',
-    template: 'Angular in Deno v{{versionDeno}}',
-})
-export class AppComponent {
-    versionDeno = Deno.version.deno;
-}
 
 @NgModule({
     imports: [ServerModule],
