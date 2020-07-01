@@ -19,15 +19,15 @@ export class FileSystemResourceLoader extends ResourceLoader {
 
     get(url: string, aa?: any): Promise<string> {
         const appDir = 'example';
-        const templatePath = this.resolve(url, appDir);
+        const filePath = this.resolve(url, appDir);
 
-        if (this.filesCache.has(templatePath)) {
-            return Promise.resolve(this.filesCache.get(templatePath) + '');
+        if (this.filesCache.has(filePath)) {
+            return Promise.resolve(this.filesCache.get(filePath) + '');
         }
 
-        return readFile(templatePath).then(source => {
+        return readFile(filePath).then(source => {
             const template: string = decoder.decode(source)
-            this.filesCache.set(templatePath, template)
+            this.filesCache.set(filePath, template)
 
             return template;
         });

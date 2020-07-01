@@ -1,6 +1,8 @@
 
 import { NgModuleFactory, CompilerFactory, StaticProvider, Compiler } from 'https://jspm.dev/@angular/core';
 import { INITIAL_CONFIG, renderModuleFactory } from './platform-server.mjs';
+const { readFile } = Deno;
+const decoder = new TextDecoder();
 
 export class CommonEngine {
 
@@ -12,7 +14,7 @@ export class CommonEngine {
     }
 
     private factoryCacheMap = new Map<any, any>();
-    private templateCache: { [key: string]: string } = {};
+    private readonly templateCache: Map<string, string> = new Map<string, string>()
 
     constructor(private compilerFactory: CompilerFactory, private moduleOrFactory?: any,
         private providers: StaticProvider[] = []) { }
@@ -65,11 +67,16 @@ export class CommonEngine {
     }
 
     /** Retrieve the document from the cache or the filesystem */
-    private getDocument(filePath: string): Promise<string> {
-        // const doc = this.templateCache[filePath] = this.templateCache[filePath] ||
-        //     fs.readFileSync(filePath).toString();
+    private getDocument(filePath: string): Promise<string> {        
+        if (this.templateCache.has(filePath)) {
+            return Promise.resolve(this.templateCache.get(filePath) + '');
+        }
 
-        // As  promise so we can change the API later without breaking
-        return Promise.resolve('');
+        return readFile(filePath).then(source => {
+            const template: string = decoder.decode(source)
+            this.templateCache.set(filePath, template)
+
+            return template;
+        });
     }
 }
