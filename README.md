@@ -6,6 +6,8 @@ This is experimental Angular SSR in Deno
 
 `deno run --config tsconfig.json --importmap=importmap.json --allow-read main.ts`
 
+Declare Angular depss
+
 importmap.json:
 ```json
 {
