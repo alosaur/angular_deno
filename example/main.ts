@@ -1,4 +1,4 @@
-import { CompilerFactory, enableProdMode } from 'https://jspm.dev/@angular/core';
+import { CompilerFactory, enableProdMode } from 'https://jspm.dev/@angular/core@10.0.1';
 import { AppModule } from './app.module.ts';
 import { bootstrap, CommonEngine } from '../mod.ts';
 

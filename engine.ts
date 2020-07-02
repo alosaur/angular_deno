@@ -1,5 +1,5 @@
 
-import { NgModuleFactory, CompilerFactory, StaticProvider, Compiler } from 'https://jspm.dev/@angular/core';
+import { NgModuleFactory, CompilerFactory, StaticProvider, Compiler } from 'https://jspm.dev/@angular/core@10.0.1';
 import { INITIAL_CONFIG, renderModuleFactory } from './platform-server.mjs';
 const { readFile } = Deno;
 const decoder = new TextDecoder();

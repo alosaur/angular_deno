@@ -1,10 +1,10 @@
-import { ResourceLoader } from 'https://jspm.dev/@angular/compiler';
+import { ResourceLoader } from 'https://jspm.dev/@angular/compiler@10.0.1';
 import { join } from "https://deno.land/std@0.58.0/path/posix.ts";
 
 const { readFile } = Deno;
 const decoder = new TextDecoder();
 
-export class FileSystemResourceLoader extends ResourceLoader {
+export class DenoFileSystemResourceLoader extends ResourceLoader {
     private readonly filesCache: Map<string, string> = new Map<string, string>()
 
     resolve(url: string, baseUrl: string): string {
