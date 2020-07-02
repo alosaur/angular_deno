@@ -1,6 +1,6 @@
 # Angular renderer in Deno
 
-This is experimental Angular SSR in Deno
+This is experimental Angular SSR in Deno, and will be used as a renderer for [Alosaur](https://github.com/alosaur/alosaur) web framework, as well as handlebars, ejs, mustache. 
 
 ## How to use
 
