@@ -1,5 +1,5 @@
 
-import { NgModule } from 'https://jspm.dev/@angular/core@10.0.1';
+import { NgModule } from '@angular/core';
 import { ServerModule } from '../mod.ts';
 import { AppComponent } from './app.component.ts';
 

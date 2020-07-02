@@ -22,7 +22,6 @@ const platformDenoDynamicServer = createPlatformFactory(ɵplatformCoreDynamic, "
 ]);
 
 export async function bootstrap(module: any, document: string) {
-    console.log(11);
     return Promise.resolve(platformDenoDynamicServer({
         provide: INITIAL_CONFIG,
         useValue: {

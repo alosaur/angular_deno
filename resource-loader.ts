@@ -18,7 +18,7 @@ export class DenoFileSystemResourceLoader extends ResourceLoader {
     }
 
     get(url: string, aa?: any): Promise<string> {
-        const appDir = 'example';
+        const appDir = '';
         const filePath = this.resolve(url, appDir);
 
         if (this.filesCache.has(filePath)) {

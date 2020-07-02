@@ -1,4 +1,4 @@
-import { Component } from 'https://jspm.dev/@angular/core@10.0.1';
+import { Component } from '@angular/core';
 
 @Component({
     selector: 'my-app',
