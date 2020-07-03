@@ -67,4 +67,6 @@ export class AppModule { }
 
 ## TODO
 
+- [ ] Transfer state
+- [ ] AOT
 - [ ] SASS support 
