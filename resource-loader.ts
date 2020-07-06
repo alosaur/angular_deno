@@ -1,15 +1,19 @@
-import { ResourceLoader, Optional } from 'https://jspm.dev/@angular/compiler@10.0.1';
+import { ResourceLoader } from 'https://jspm.dev/@angular/compiler@10.0.1';
+import { Injector } from 'https://jspm.dev/@angular/core@10.0.1';
 import { join } from "https://deno.land/std@0.58.0/path/posix.ts";
-import { INITIAL_CONFIG } from './platform-server.mjs';
+import { RESOURCE_PATH } from './bootstrap.ts';
 
 const { readFile } = Deno;
 const decoder = new TextDecoder();
 
 export class DenoFileSystemResourceLoader extends ResourceLoader {
     private readonly filesCache: Map<string, string> = new Map<string, string>()
+    private readonly resourcePath: string;
 
-    constructor(@Optional() private readonly config: INITIAL_CONFIG) {
+    constructor(private readonly injector: Injector) {
         super();
+
+        this.resourcePath = this.injector.get(RESOURCE_PATH);
     }
 
     resolve(url: string, baseUrl: string): string {
@@ -23,7 +27,9 @@ export class DenoFileSystemResourceLoader extends ResourceLoader {
     }
 
     get(url: string, aa?: any): Promise<string> {
-        const appDir = (this.config && this.config.resourcePath) || '';
+        console.log(11,this.resourcePath);
+        
+        const appDir = this.resourcePath || '';
         const filePath = this.resolve(url, appDir);
 
         if (this.filesCache.has(filePath)) {

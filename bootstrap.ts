@@ -1,18 +1,25 @@
-import { createPlatformFactory, COMPILER_OPTIONS } from 'https://jspm.dev/@angular/core@10.0.1';
+import { createPlatformFactory, Injector, COMPILER_OPTIONS, InjectionToken } from 'https://jspm.dev/@angular/core@10.0.1';
 import { ɵplatformCoreDynamic } from 'https://jspm.dev/@angular/platform-browser-dynamic@10.0.1';
 import { ResourceLoader } from 'https://jspm.dev/@angular/compiler@10.0.1';
 import { INITIAL_CONFIG, ɵINTERNAL_SERVER_PLATFORM_PROVIDERS as INTERNAL_SERVER_PLATFORM_PROVIDERS } from './platform-server.mjs';
 import { DenoFileSystemResourceLoader } from './resource-loader.ts';
 
-const platformDenoDynamicServer = createPlatformFactory(ɵplatformCoreDynamic, "serverDenoDynamic", 
+export const RESOURCE_PATH = new InjectionToken('RESOURCE_PATH');
+
+const platformDenoDynamicServer = (resourcePath: string) => createPlatformFactory(ɵplatformCoreDynamic, "serverDenoDynamic", 
 [...INTERNAL_SERVER_PLATFORM_PROVIDERS,
 {
     provide: COMPILER_OPTIONS,
     useValue: {
         providers: [
             {
+                provide: RESOURCE_PATH,
+                useValue: resourcePath
+            },
+            {
                 provide: ResourceLoader,
                 useClass: DenoFileSystemResourceLoader,
+                deps: [Injector]
             }
         ]
     },
@@ -20,16 +27,15 @@ const platformDenoDynamicServer = createPlatformFactory(ɵplatformCoreDynamic, "
 }
 ]);
 
-export async function bootstrap(module: any, document: string, resourcePath?: string) {
-    return Promise.resolve(platformDenoDynamicServer({
+export async function bootstrap(module: any, document: string, resourcePath: string = "") {
+    return Promise.resolve(platformDenoDynamicServer(resourcePath)([
+    {
         provide: INITIAL_CONFIG,
         useValue: {
             document,
-            url: '/',
-            resourcePath
+            url: '/'
         }
-    }).bootstrapModule(module, { ngZone: 'noop' }).then((ref: any) => {
-        
+    }]).bootstrapModule(module, { ngZone: 'noop' }).then((ref: any) => {        
         return Promise.resolve(ref)
     }));
 }
