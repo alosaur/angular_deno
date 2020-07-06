@@ -13,7 +13,7 @@ const platformDenoDynamicServer = createPlatformFactory(ɵplatformCoreDynamic, "
             {
                 provide: ResourceLoader,
                 useClass: DenoFileSystemResourceLoader,
-                deps: []
+                deps: [INITIAL_CONFIG]
             }
         ]
     },
@@ -21,12 +21,13 @@ const platformDenoDynamicServer = createPlatformFactory(ɵplatformCoreDynamic, "
 }
 ]);
 
-export async function bootstrap(module: any, document: string) {
+export async function bootstrap(module: any, document: string, resourcePath?: string) {
     return Promise.resolve(platformDenoDynamicServer({
         provide: INITIAL_CONFIG,
         useValue: {
             document,
-            url: '/'
+            url: '/',
+            resourcePath
         }
     }).bootstrapModule(module, { ngZone: 'noop' }).then((ref: any) => {
         
