@@ -13,7 +13,6 @@ const platformDenoDynamicServer = createPlatformFactory(ɵplatformCoreDynamic, "
             {
                 provide: ResourceLoader,
                 useClass: DenoFileSystemResourceLoader,
-                deps: [INITIAL_CONFIG]
             }
         ]
     },
