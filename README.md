@@ -13,7 +13,8 @@ importmap.json:
 {
   "imports": {
     "@angular/core": "https://jspm.dev/@angular/core@10.0.1",
-    "@angular/deno": "https://deno.land/x/angular_deno",
+    "@angular/deno": "https://deno.land/x/angular_deno/mod.ts",
+    "@angular/deno/": "https://deno.land/x/angular_deno/",
      "zone.js": "https://jspm.dev/zone.js/dist/zone"
   }
 }
