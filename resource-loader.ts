@@ -1,4 +1,4 @@
-import { ResourceLoader } from 'https://jspm.dev/@angular/compiler@10.0.1';
+import { ResourceLoader, Optional } from 'https://jspm.dev/@angular/compiler@10.0.1';
 import { join } from "https://deno.land/std@0.58.0/path/posix.ts";
 import { INITIAL_CONFIG } from './platform-server.mjs';
 
@@ -8,7 +8,7 @@ const decoder = new TextDecoder();
 export class DenoFileSystemResourceLoader extends ResourceLoader {
     private readonly filesCache: Map<string, string> = new Map<string, string>()
 
-    constructor(private readonly config: INITIAL_CONFIG) {
+    constructor(@Optional() private readonly config: INITIAL_CONFIG) {
         super();
     }
 
