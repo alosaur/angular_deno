@@ -4,7 +4,7 @@ This is experimental Angular SSR in Deno, and will be used as a renderer for [Al
 
 ## How to use
 
-`deno run --config tsconfig.json --importmap=importmap.json --allow-read main.ts`
+`deno run --config tsconfig.json --unstable --importmap=importmap.json --allow-read main.ts`
 
 Declare Angular deps
 
