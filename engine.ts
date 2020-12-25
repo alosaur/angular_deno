@@ -1,5 +1,5 @@
 
-import { NgModuleFactory, CompilerFactory, StaticProvider, Compiler } from 'https://jspm.dev/@angular/core@10.0.1';
+import { NgModuleFactory, CompilerFactory, Compiler } from 'https://jspm.dev/@angular/core@11';
 import { INITIAL_CONFIG, renderModuleFactory } from './platform-server.mjs';
 const { readFile } = Deno;
 const decoder = new TextDecoder();
@@ -7,7 +7,10 @@ const decoder = new TextDecoder();
 export class CommonEngine {
 
     /** Return an instance of the platformServer compiler */
+
+    // @ts-ignore
     getCompiler(): Compiler {
+    // @ts-ignore
         const compilerFactory: CompilerFactory = this.compilerFactory;//platformCoreDynamic().injector.get(CompilerFactory);
 
         return compilerFactory.createCompiler();
@@ -16,8 +19,9 @@ export class CommonEngine {
     private factoryCacheMap = new Map<any, any>();
     private readonly templateCache: Map<string, string> = new Map<string, string>()
 
+    // @ts-ignore
     constructor(private compilerFactory: CompilerFactory, private moduleOrFactory?: any,
-        private providers: StaticProvider[] = []) { }
+        private providers: any[] = []) { }
 
     /**
      * Render an HTML document for a specific URL with specified

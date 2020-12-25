@@ -1,14 +1,14 @@
-import _core from 'https://jspm.dev/npm:@angular/core@10.0.1!cjs';
+import _core from 'https://jspm.dev/npm:@angular/core@11!cjs';
 import 'https://jspm.dev/npm:rxjs@6!cjs';
 import 'https://jspm.dev/npm:rxjs@6/operators!cjs';
-import _common from 'https://jspm.dev/npm:@angular/common@10.0.1!cjs';
-import _platformBrowser from 'https://jspm.dev/npm:@angular/platform-browser@10.0.1!cjs';
-import _browser from 'https://jspm.dev/npm:@angular/animations@10.0.1/browser!cjs';
-import _http from 'https://jspm.dev/npm:@angular/common@10.0.1/http!cjs';
-import _compiler from 'https://jspm.dev/npm:@angular/compiler@10.0.1!cjs';
-import _platformBrowserDynamic from 'https://jspm.dev/npm:@angular/platform-browser-dynamic@10.0.1!cjs';
-import 'https://jspm.dev/npm:@angular/animations@10.0.1!cjs';
-import _animations from 'https://jspm.dev/npm:@angular/platform-browser@10.0.1/animations!cjs';
+import _common from 'https://jspm.dev/npm:@angular/common@11!cjs';
+import _platformBrowser from 'https://jspm.dev/npm:@angular/platform-browser@11!cjs';
+import _browser from 'https://jspm.dev/npm:@angular/animations@11/browser!cjs';
+import _http from 'https://jspm.dev/npm:@angular/common@11/http!cjs';
+import _compiler from 'https://jspm.dev/npm:@angular/compiler@11!cjs';
+import _platformBrowserDynamic from 'https://jspm.dev/npm:@angular/platform-browser-dynamic@11!cjs';
+import 'https://jspm.dev/npm:@angular/animations@11!cjs';
+import _animations from 'https://jspm.dev/npm:@angular/platform-browser@11/animations!cjs';
 import _rxjs from 'https://jspm.dev/npm:rxjs!cjs';
 import _url from 'https://jspm.dev/npm:@jspm/core@2/nodelibs/url';
 import _operators from 'https://jspm.dev/npm:rxjs/operators!cjs';
@@ -1858,4 +1858,4 @@ const BEFORE_APP_SERIALIZED = exports.BEFORE_APP_SERIALIZED,
 export default exports;
 export { BEFORE_APP_SERIALIZED, INITIAL_CONFIG, PlatformState, ServerModule, ServerTransferStateModule, VERSION, __esModule, platformDynamicServer, platformServer, renderModule, renderModuleFactory, ɵINTERNAL_SERVER_PLATFORM_PROVIDERS, ɵSERVER_RENDER_PROVIDERS, ɵServerRendererFactory2, ɵangular_packages_platform_server_platform_server_a, ɵangular_packages_platform_server_platform_server_b, ɵangular_packages_platform_server_platform_server_c, ɵangular_packages_platform_server_platform_server_d, ɵangular_packages_platform_server_platform_server_e, ɵangular_packages_platform_server_platform_server_f, ɵangular_packages_platform_server_platform_server_g };
 
-//# sourceMappingURL=platform-server@10.0.1!cjs.map
+//# sourceMappingURL=platform-server@11!cjs.map
