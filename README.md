@@ -1,5 +1,7 @@
 # Angular renderer in Deno
 
+Now Supported Angular 11 and Deno 1.6
+
 This is experimental Angular SSR in Deno, and will be used as a renderer for [Alosaur](https://github.com/alosaur/alosaur) web framework, as well as handlebars, ejs, mustache. 
 
 ## How to use
@@ -12,7 +14,7 @@ importmap.json:
 ```json
 {
   "imports": {
-    "@angular/core": "https://jspm.dev/@angular/core@10.0.1",
+    "@angular/core": "https://jspm.dev/@angular/core@11",
     "@angular/deno": "https://deno.land/x/angular_deno/mod.ts",
     "@angular/deno/": "https://deno.land/x/angular_deno/",
      "zone.js": "https://jspm.dev/zone.js/dist/zone"

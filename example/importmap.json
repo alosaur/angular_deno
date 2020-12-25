@@ -1,6 +1,6 @@
 {
   "imports": {
-    "@angular/core": "https://jspm.dev/@angular/core@10.0.1",
+    "@angular/core": "https://jspm.dev/@angular/core@11",
      "zone.js": "https://jspm.dev/zone.js/dist/zone"
   }
 }

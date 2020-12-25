@@ -1,6 +1,6 @@
-import { ResourceLoader } from 'https://jspm.dev/@angular/compiler@10.0.1';
-import { Injector } from 'https://jspm.dev/@angular/core@10.0.1';
-import { join } from "https://deno.land/std@0.65.0/path/posix.ts";
+import { ResourceLoader } from 'https://jspm.dev/@angular/compiler@11';
+import { Injector } from 'https://jspm.dev/@angular/core@11';
+import { join } from "https://deno.land/std@0.82.0/path/posix.ts";
 import { RESOURCE_PATH } from './bootstrap.ts';
 
 const { readFile } = Deno;
@@ -10,6 +10,7 @@ export class DenoFileSystemResourceLoader extends ResourceLoader {
     private readonly filesCache: Map<string, string> = new Map<string, string>()
     private readonly resourcePath: string;
 
+    // @ts-ignore
     constructor(private readonly injector: Injector) {
         super();
 
