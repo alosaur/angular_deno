@@ -14,7 +14,7 @@ importmap.json:
 ```json
 {
   "imports": {
-    "@angular/core": "https://jspm.dev/@angular/core@11",
+    "@angular/core": "https://jspm.dev/@angular/core@11.0.5",
     "@angular/deno": "https://deno.land/x/angular_deno/mod.ts",
     "@angular/deno/": "https://deno.land/x/angular_deno/",
      "zone.js": "https://jspm.dev/zone.js/dist/zone"

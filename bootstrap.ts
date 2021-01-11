@@ -1,12 +1,12 @@
-import { createPlatformFactory, Injector, COMPILER_OPTIONS, InjectionToken } from 'https://jspm.dev/@angular/core@11';
-import { ɵplatformCoreDynamic } from 'https://jspm.dev/@angular/platform-browser-dynamic@11';
-import { ResourceLoader } from 'https://jspm.dev/@angular/compiler@11';
+import { createPlatformFactory, Injector, COMPILER_OPTIONS, InjectionToken } from 'https://jspm.dev/@angular/core@11.0.5';
+import {  ɵplatformCoreDynamic } from 'https://jspm.dev/@angular/platform-browser-dynamic@11.0.5';
+import { ResourceLoader } from 'https://jspm.dev/@angular/compiler@11.0.5';
 import { INITIAL_CONFIG, ɵINTERNAL_SERVER_PLATFORM_PROVIDERS as INTERNAL_SERVER_PLATFORM_PROVIDERS } from './platform-server.mjs';
 import { DenoFileSystemResourceLoader } from './resource-loader.ts';
 
 export const RESOURCE_PATH = new InjectionToken('RESOURCE_PATH');
 
-const platformDenoDynamicServer = (resourcePath: string) => createPlatformFactory(ɵplatformCoreDynamic, "serverDenoDynamic", 
+const platformDenoDynamicServer = (resourcePath: string) => createPlatformFactory(ɵplatformCoreDynamic, "serverDenoDynamic",
 [...INTERNAL_SERVER_PLATFORM_PROVIDERS,
 {
     provide: COMPILER_OPTIONS,
