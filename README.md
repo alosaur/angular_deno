@@ -1,5 +1,7 @@
 # Angular renderer in Deno
 
+![test](https://github.com/alosaur/angular_deno/workflows/test/badge.svg)
+
 Now Supported Angular 11.0.5 and Deno 1.8.0
 
 This is experimental Angular SSR in Deno, and will be used as a renderer for [Alosaur](https://github.com/alosaur/alosaur) web framework, as well as handlebars, ejs, mustache. 

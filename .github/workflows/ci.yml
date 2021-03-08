@@ -16,4 +16,4 @@ jobs:
               with:
                   deno-version: ${{ matrix.deno }}
             - name: Test
-              run: deno test --importmap=importmap.json --location=https://jspm.dev --allow-read
+              run: deno test --importmap=example/importmap.json --location=https://jspm.dev --allow-read
