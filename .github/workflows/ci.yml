@@ -1,0 +1,19 @@
+name: test
+
+on: [push, pull_request]
+
+jobs:
+    build:
+        runs-on: ubuntu-16.04
+        strategy:
+            matrix:
+                deno: [1.8.0]
+        name: Deno ${{ matrix.deno }}
+        steps:
+            - uses: actions/checkout@master
+            - name: Setup deno
+              uses: denolib/setup-deno@master
+              with:
+                  deno-version: ${{ matrix.deno }}
+            - name: Test
+              run: deno test --importmap=importmap.json --location=https://jspm.dev --allow-read

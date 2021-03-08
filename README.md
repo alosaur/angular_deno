@@ -1,12 +1,12 @@
 # Angular renderer in Deno
 
-Now Supported Angular 11 and Deno 1.6
+Now Supported Angular 11.0.5 and Deno 1.8.0
 
 This is experimental Angular SSR in Deno, and will be used as a renderer for [Alosaur](https://github.com/alosaur/alosaur) web framework, as well as handlebars, ejs, mustache. 
 
 ## How to use
 
-`deno run --config tsconfig.json --unstable --importmap=importmap.json --allow-read main.ts`
+`deno run --importmap=importmap.json --location=https://jspm.dev --allow-read main.ts`
 
 Declare Angular deps
 

@@ -1,12 +1,12 @@
 ## Run as server:
 
-deno run --config tsconfig.json --importmap=importmap.json -A --unstable server.ts
+deno run --importmap=importmap.json --location=https://jspm.dev --allow-read server.ts
 
 Open in browser: https://localhost:8000 
 
 ## Render app page
 
-deno run --config tsconfig.json --importmap=importmap.json -A --unstable main.ts
+deno run --importmap=importmap.json --location=https://jspm.dev --allow-read main.ts
 
 Output:
 
@@ -20,7 +20,7 @@ Output:
   </head>
 
   <body>
-      <my-app _nghost-sc1="" ng-version="11.0.5">Angular in Deno v1.6.2</my-app>
+      <my-app _nghost-sc1="" ng-version="11.0.5">Angular in Deno v1.8.0</my-app>
   </body>
 </html>
 ```
