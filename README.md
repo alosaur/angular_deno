@@ -75,3 +75,12 @@ export class AppModule { }
 - [ ] Transfer state
 - [ ] AOT
 - [ ] SASS support 
+
+### Note
+
+All .mjs files in this repository exported from jspm.dev as ESM module, for example:
+https://jspm.dev/npm:@angular/platform-server@10.2.4!cjs
+
+Why platform-server.mjs exported from jspm and not rewrite DominoAdapter?
+I do not remember, maybe something broke at the moment of redefining providers
+https://github.com/angular/angular/blob/a6971ba89adc253bfa4260036ee4a1e0bd76159f/packages/platform-server/src/server.ts#L33
