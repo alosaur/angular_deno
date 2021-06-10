@@ -4,7 +4,7 @@ import { AppModule } from "./app.module.ts";
 import "../reflect.ts";
 import "zone.js";
 
-import { assert } from "https://deno.land/std@0.87.0/testing/asserts.ts";
+import { assert } from "https://deno.land/std@0.97.0/testing/asserts.ts";
 
 /**
  * Test cases
@@ -31,6 +31,6 @@ Deno.test({
         const text: string = await engine.render({ document: indexHtml, url: "/" });
 
         assert(text.includes("<title>Angular SSR with Deno</title>"))
-        assert(text.includes("ng-version=\"11.0.5\""))
+        assert(text.includes("ng-version=\"12.0.3\""))
     }
 })

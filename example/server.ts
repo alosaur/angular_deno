@@ -1,4 +1,4 @@
-import { serve } from "https://deno.land/std@0.82.0/http/server.ts";
+import { serve } from "https://deno.land/std@0.89.0/http/server.ts";
 
 import { CompilerFactory, enableProdMode } from "@angular/core";
 import { bootstrap, CommonEngine } from "../mod.ts";
