@@ -2,7 +2,7 @@
 
 ![test](https://github.com/alosaur/angular_deno/workflows/test/badge.svg)
 
-Now Supported Angular 11.0.5 and Deno 1.8.0
+Now Supported Angular 12.0.3 and Deno 1.8.0
 
 This is experimental Angular SSR in Deno, and will be used as a renderer for [Alosaur](https://github.com/alosaur/alosaur) web framework, as well as handlebars, ejs, mustache. 
 
@@ -16,7 +16,7 @@ importmap.json:
 ```json
 {
   "imports": {
-    "@angular/core": "https://jspm.dev/@angular/core@11.0.5",
+    "@angular/core": "https://jspm.dev/@angular/core@12.0.3",
     "@angular/deno": "https://deno.land/x/angular_deno/mod.ts",
     "@angular/deno/": "https://deno.land/x/angular_deno/",
      "zone.js": "https://jspm.dev/zone.js/dist/zone"

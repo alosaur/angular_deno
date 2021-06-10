@@ -20,7 +20,7 @@ Output:
   </head>
 
   <body>
-      <my-app _nghost-sc1="" ng-version="11.0.5">Angular in Deno v1.8.0</my-app>
+      <my-app _nghost-sc1="" ng-version="12.0.3">Angular in Deno v1.8.0</my-app>
   </body>
 </html>
 ```

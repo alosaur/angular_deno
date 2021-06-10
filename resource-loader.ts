@@ -1,6 +1,6 @@
 import { ResourceLoader } from 'https://jspm.dev/@angular/compiler@11';
 import { Injector } from 'https://jspm.dev/@angular/core@11';
-import { join } from "https://deno.land/std@0.82.0/path/posix.ts";
+import { join } from "https://deno.land/std@0.89.0/path/posix.ts";
 import { RESOURCE_PATH } from './bootstrap.ts';
 
 const { readFile } = Deno;
