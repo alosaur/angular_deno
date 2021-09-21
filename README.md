@@ -70,7 +70,9 @@ import { AppComponent } from './app.component.ts';
 export class AppModule { }
 ```
 
-## TODO
+## TODO 
+
+If the "stars" on this project will be more than 100 ;)
 
 - [ ] Transfer state
 - [ ] AOT
