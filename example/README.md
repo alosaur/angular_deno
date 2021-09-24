@@ -1,12 +1,14 @@
 ## Run as server:
 
-deno run --importmap=importmap.json --location=https://jspm.dev --allow-read server.ts
+deno run --importmap=importmap.json --location=https://jspm.dev --allow-read
+server.ts
 
-Open in browser: https://localhost:8000 
+Open in browser: https://localhost:8000
 
 ## Render app page
 
-deno run --importmap=importmap.json --location=https://jspm.dev --allow-read main.ts
+deno run --importmap=importmap.json --location=https://jspm.dev --allow-read
+main.ts
 
 Output:
 
