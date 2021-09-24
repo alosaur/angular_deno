@@ -1,6 +1,7 @@
 {
   "imports": {
     "@angular/core": "https://jspm.dev/@angular/core@12.0.3",
-    "zone.js": "https://jspm.dev/zone.js/dist/zone"
+    "zone.js": "https://jspm.dev/zone.js/dist/zone",
+    "reflect": "https://deno.land/x/alosaur@v0.34.0/src/injection/reflect.ts"
   }
 }

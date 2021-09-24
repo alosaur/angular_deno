@@ -19,6 +19,7 @@ importmap.json:
     "@angular/core": "https://jspm.dev/@angular/core@12.0.3",
     "@angular/deno": "https://deno.land/x/angular_deno/mod.ts",
     "@angular/deno/": "https://deno.land/x/angular_deno/",
+    "reflect": "https://deno.land/x/alosaur@v0.34.0/src/injection/reflect.ts",
      "zone.js": "https://jspm.dev/zone.js/dist/zone"
   }
 }
@@ -31,7 +32,7 @@ import { CompilerFactory, enableProdMode } from '@angular/core';
 import { bootstrap, CommonEngine } from '@angular/deno';
 import { AppModule } from './app.module.ts';
 
-import "@angular/deno/reflect.ts";
+import "reflect";
 import 'zone.js';
 
 const { readFile } = Deno;

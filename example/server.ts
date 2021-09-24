@@ -4,7 +4,7 @@ import { CompilerFactory, enableProdMode } from "@angular/core";
 import { bootstrap, CommonEngine } from "../mod.ts";
 import { AppModule } from "./app.module.ts";
 
-import "../reflect.ts";
+import "reflect";
 import "zone.js";
 
 const { readFile } = Deno;
